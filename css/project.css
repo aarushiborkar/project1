@@ -458,6 +458,92 @@ h1 .type{
 
 
 
+.hover-4 img {
+}
+
+.hover-4 .hover-overlay {
+ 
+  z-index: 90;
+}
+
+.hover-4-title {
+  position: absolute;
+  bottom: 0;
+
+  padding: 3rem;
+  z-index: 99;
+}
+
+.hover-4-description {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  text-align: center;
+
+  padding: 0 1rem;
+  z-index: 99;
+  opacity: 0;
+}
+
+@media (min-width: 992px) {
+  .hover-4-description {
+    
+  }
+}
+
+.hover-4:hover img {
+  width: 100%;
+}
+
+.hover-4:hover::after {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-4:hover .hover-4-description {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-4:hover .hover-overlay {
+
+}
+
+
+
+.accordion .card {
+	border: none;
+	margin-bottom: 2px;
+}
+.accordion .card-header {
+	background: #313232;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+.accordion .card-header h2 {
+	color: #fff;
+	font-size: 1rem;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+}
+.accordion .card-header h2 span {
+	float: left;
+	margin-top: 10px;
+}
+.accordion .card-header button {
+	color: #fff;
+	font-size: 1.3rem;
+	line-height: 1.3rem;
+	float: right;
+}
+.accordion .card-header button:hover {
+	color: #313232;
+}
+
+
+
+
+
 
 
 

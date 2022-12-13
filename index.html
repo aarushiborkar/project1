@@ -6,6 +6,7 @@
     <title>project1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="css/project.css" rel="stylesheet">
+    <script src="js/project1.js"></script>
     <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
@@ -13,9 +14,29 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js">
     <link href="	https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-	
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js">
+      <script type="text/javascript">
+        $(document).ready(function() {
+      
+$('.button').first().addClass('active');
+
+$('.button').click(function(){
+  var $this = $(this);
+  $siblings = $this.parent().children(),
+  position = $siblings.index($this);
+  console.log (position);
+  
+  $('.content div').removeClass('active').eq(position).addClass('active');
+  
+  $siblings.removeClass('active');
+  $this.addClass('active');
+})
+      
+        });
+     </script>
 		<link rel="stylesheet" href="css/ionicons.min.css">
 		<link rel="stylesheet" href="css/style.css">
   </head>
@@ -50,253 +71,197 @@
         <div class=" collapse navbar-collapse text-light" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto text-light" style="font-size: 1.5em;">
            
-            <div class="d text-light">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">About⮟</button>
-              <div class="d-content">
-                <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column">
-                    
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div class="d">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Solutions⮟</button>
-              <div class="d-content">
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">About <i class="bi bi-chevron-down"></i></button>
+               <div class="d-content">
+                <div class="row">
+               
+                  <div class="column pl-0 p-5" >
+            
+                   
+                  </div>
+                  <div class="column">
+                    
+                      
+<hr style="color: #fff;">
+<h6> <a href="blog" class="text-light" style="font-size: 0.9em; text-decoration: none;">Blogs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: #fff;">
+<h6> <a href=""  class="text-light" style="font-size: 0.9em; text-decoration: none;">Achievements &nbsp;&nbsp;&nbsp;&nbsp;
+</a> </h6>
+<hr style="color: #fff;">
+<h6> <a href=""  class="text-light" style="font-size: 0.9em; text-decoration: none;">Sucess Stories &nbsp;&nbsp;&nbsp;&nbsp;
+</a> </h6>
+ <hr style="color: #fff;">
+<h6> <a href=""  class="text-light" style="font-size: 0.9em; text-decoration: none;">Events&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: #fff;">
+<h6> <a href=""  class="text-light" style="font-size: 0.9em; text-decoration: none;"> Reports</a> </h6>
+<hr style="color: #fff;">
+<h6> <a href=""  class="text-light" style="font-size: 0.9em; text-decoration: none;"> Webinars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: #fff;">
+                  </div>
+                  <div class="column pt-5 pl-5">
+                    <h2 class="text-light" style="font-size: 1.0em; font-family: Constantia;"><strong>We are committed to bringing about change for the betterment of everybody.</strong></h2>
+           <p class="" style="color: #C6C6C6;">Every day, our knowledgeable, devoted staff puts our shared convictions into practise. Together, we blend creativity and accumulated wisdom to produce the remarkable.</p>
+                   
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="d">
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Solutions <i class="bi bi-chevron-down"></i></button>
+               <div class="d-content">
                 <div class="row">
                   <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
                   <br>
                   </div>
-                  <div class="column pl-0 p-5" style="color: black; ">
-                    <div class="col-md-8 pl-0" style=" border-top-left-radius: 25px;   border-bottom-left-radius: 25px;">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
+                  <div class="column pl-0 p-5" >
+                    <div class="col-md-8 pl-0" >
+                      <div class="shadow col-md p-3 mb-2  rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="text-light" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
                         
                       </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
+                      <div class="shadow col-md p-3 mb-2  rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="text-light" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
+                        
+                      </div>   
+                       <div class="shadow col-md p-3 mb-2  rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="text-light" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
+                        
                       </div>
                     </div>
                   </div>
                   <div class="column">
                     
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
+                    <div class="card p-3 " style="width: 18rem; background-color: #2b292c;">
+                     <div class="card-body " style="background-color: #2b292c;">
+                        <p class="card-text  text-light" style="font-size: 0.4em; background-color: #2b292c;">
+                          <h4>Digital Marketing<br><br></h4>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="marketing black.html" >Marketing Automation<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="email black.html" >Email Marketing<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="search engine black.html" >Search Engine Marketing<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="social mrdia blck.html" >Social Media Marketing<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="moblie black.html" >Mobile Marketing<br><br></a>
+                       
+                       
+                       
+                       
+                        </p>
+                        </div>
                     </div>
                   </div>
-                
                   <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
+                    
+                    <div class="card p-3 " style="width: 18rem; background-color: #2b292c;">
+                     <div class="card-body " style="background-color: #2b292c;">
+                        <p class="card-text  text-light" style="font-size: 0.2em; background-color: #2b292c;">
+                          <h4 style="font-size: 0.89em;">Analytics and Insights<br><br></h4>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="research black.html" >Research Intelligence<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="Predictive Analysis black.html" >Predective Analytics<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="business black.html" >Business Intelligence<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="speech&text black.html" >Speech & text Analytics<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="customer black.html" >Customer Segmentation<br><br></a>
+                       
+                       
+                       
+                       
+                        </p>
+                        </div>
+                    </div>
                   </div>
                   <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
+                   
                   </div>
                 </div>
               </div>
             </div>
+            <div class="d">
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Case Study</button>
+              </div>
+              <div class="d">
+                <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Career <i class="bi bi-chevron-down"></i></button>
+                 <div class="d-content">
+                  <div class="row">
                  
+                    <div class="column pl-0 p-5" >
+              
+                     
+                    </div>
+                    <div class="column">
+                      
+                        
+<hr style="color: #fff;">
+<h6> <a href="blog" class="text-light" style="font-size: 0.9em; text-decoration: none;">Blogs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: #fff;">
+<h6> <a href=""  class="text-light" style="font-size: 0.9em; text-decoration: none;">Achievements &nbsp;&nbsp;&nbsp;&nbsp;
+ </a> </h6>
+ <hr style="color: #fff;">
+<h6> <a href=""  class="text-light" style="font-size: 0.9em; text-decoration: none;">Sucess Stories &nbsp;&nbsp;&nbsp;&nbsp;
+ </a> </h6>
+   <hr style="color: #fff;">
+<h6> <a href=""  class="text-light" style="font-size: 0.9em; text-decoration: none;">Events&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: #fff;">
+<h6> <a href=""  class="text-light" style="font-size: 0.9em; text-decoration: none;"> Reports</a> </h6>
+<hr style="color: #fff;">
+<h6> <a href=""  class="text-light" style="font-size: 0.9em; text-decoration: none;"> Webinars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: #fff;">
+                    </div>
+                    <div class="column">
+                      <h3>Topics</h3>
+                      <hr>
+<div class="col-md">
+  <a class="" style="text-decoration: none; font-size: 0.6em;" href="research black.html" >Digital Research<br><br></a>
+  <a class="" style="text-decoration: none; font-size: 0.6em;" href="Predictive Analysis black.html" >DevOps<br><br></a>
+  <a class="" style="text-decoration: none; font-size: 0.6em;" href="business black.html" >Sales Intelligence<br><br></a>
+  <a class="" style="text-decoration: none; font-size: 0.6em;" href="speech&text black.html" >Legal Consultant<br><br></a>
+  <a class="" style="text-decoration: none; font-size: 0.6em;" href="customer black.html" >Marketing Automation<br><br></a>
+
+</div>
+
+
+                     
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            
             <div class="d">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Case Study</button>
-            </div>
-            <div class="d">
-              <button class="d-btn text-light " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Explore⮟</button>
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Contact Us <i class="bi bi-chevron-down"></i></button>
               <div class="d-content">
                 <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
+               
+                  <div class="column pr-0" >
+                    <div class="col " style=" border-top-left-radius: 20px;   border-bottom-left-radius: 20px;">
+                      <div class="hover hover-4 text-white " style=" border-top-right-radius: 20px; height: 2020%;  border-bottom-right-radius: 20px; border-top-left-radius: 20px;   border-bottom-left-radius: 20px;" >
+                        <img src="img/171.png" alt="">
+                        <div class="hover-overlay"></div>
+                        <div class="hover-4-content">
+                          <h3 class="hover-4-title  text-uppercase mb-0" style="text-align: center; font-family: Bahnschrift Light; font-size: 1.0em;">APP DEVELOPMENT</h3>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="column">
-                    
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
+                   
                   </div>
                 </div>
               </div>
             </div>
-          
-            <div class="d">
-              <button class="d-btn text-light " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Career⮟</button>
-              <div class="d-content">
-                <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column">
-                    
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                
-            <div class="d">
-              <button class="d-btn text-light " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Contact Us</button>
-          </div>
                 
           <div class="d">
-            <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">☾</button>
-        </div>
+            <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;"><a href=".html" style="text-decoration: none; color: #fff;"><i class="bi bi-brightness-high-fill"></i></a></button>
+       </div>
               
             <div class="d">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">EN⮟</button>
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">EN <i class="bi bi-chevron-down"></i></button>
               <div class="d-content">
                 <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column">
-                    
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -350,11 +315,10 @@
       <div class="container">
         <div class="row align-items-center justify-content-between">
           <div class="container text-center">
-            <h2 style="color: rgb(255, 255, 255); text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong> Services</strong></h2>
+            <h2 style="color: rgb(255, 255, 255); text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Our&nbsp;Services</strong></h2>
           </div>
           <div class="col-md">
-            <img src="img/2.png" class="img-fluid" alt="ferment" style="width: 90%; ">
-          </div>
+         </div>
           <div class="col-md-7 p-5">
             <h2 style="color: #BC312E; font-size: 4.0em; font-family: Constantia;"><strong>Analytics & Insights</strong></h2>
             <h3 style="color: #757474; font-size: 0,5em;">Are you have hard time<br> understanding your data?</h3>
@@ -362,57 +326,23 @@
            </p> 
            <br>
           
-           <div class="accordion accordion-flush " id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed text-light" style="background-color: #211F22; " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  Business Intelligence
-                </button>
-              </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">The majority of our breads are European style sourdoughs, so it will be less sour than a San Francisco style sourdough but the process is the same. We use a long fermentation with wild yeast. This produces a healthier and more flavorful bread.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="accordion-button collapsed text-light" style="background-color: #211F22; " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Customer Segmentation
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">We do not offer any gluten free breads. Gluten is what we specialize in. However, we do offer some pastry options such as our flourless brownie that are made without flour. Also we have a beautiful cheese and meat fridge that is 100% safe for those staying away from gluten. </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed text-light" style="background-color: #211F22; " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Predective Analytics
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Fermentation is the chemical breakdown of a substance by bacteria, yeasts, or other microorganisms. In bread, fermentation occurs when yeast and bacteria inside the dough convert carbohydrates to carbon dioxide causing gas bubbles to form, which has a leavening effect on dough as well as creating flavor. This process is very similar to wine, beer and sauerkraut.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingFour">
-                <button class="accordion-button collapsed text-light" style="background-color: #211F22; " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
-                 Research Intelligence 
-                </button>
-              </h2>
-              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Yes! Most of our breads are Vegan. All our sourdough breads are vegan unless they have cheese or meat in them, and we make sure to label those breads accordingly (Cheesy Grits, Feta Basil, Cheddar Jalapeño, Bacon Baguette...). We do make loaves such as Challah which contains Sequatchie Cove Farm pasture raised eggs which is not vegan. </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed text-light" style="background-color: #211F22; " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Speech & text Analytics
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Fermentation is the chemical breakdown of a substance by bacteria, yeasts, or other microorganisms. In bread, fermentation occurs when yeast and bacteria inside the dough convert carbohydrates to carbon dioxide causing gas bubbles to form, which has a leavening effect on dough as well as creating flavor. This process is very similar to wine, beer and sauerkraut.</div>
-              </div>
-            </div>
+<hr style="color: #fff;">
+           <h6> <a href="business black.html" class="text-light" style="text-decoration: none;">Business Intelligence  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="bi bi-chevron-right"></i></a> </h6>
+           <hr style="color: #fff;">
+           <h6> <a href="customer black.html"  class="text-light" style="text-decoration: none;">Customer Segmentation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="bi bi-chevron-right"></i></a> </h6>
+              <hr style="color: #fff;">
+           <h6> <a href="Predictive Analysis black.html"  class="text-light" style="text-decoration: none;">Predective Analytics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="bi bi-chevron-right"></i></a> </h6>
+           <hr style="color: #fff;">
+           <h6> <a href="research black.html"  class="text-light" style="text-decoration: none;">   Research Intelligence &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="bi bi-chevron-right"></i></a> </h6>
+           <hr style="color: #fff;">
+           <h6> <a href="speech&text black.html"  class="text-light" style="text-decoration: none;"> Speech & text Analytics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="bi bi-chevron-right"></i></a> </h6>
+           <hr style="color: #fff;">
+         
           </div>
 
           </div>
@@ -432,25 +362,25 @@
           <br>
           <div class="row" style="background-color: #211F22;">
             <div class="column"  style="background-color: #211F22;">
-              <a href="link address"><img src="img/i9.png"></a>
-                <a href="link address"><img src="img/i13.png"></a>
+              <a href="banking black.html"><img src="img/i9.png"></a>
+                <a href="technology black.html"><img src="img/i13.png"></a>
          
               
             </div>
             <div class="column"  style="background-color: #211F22;">
-              <a href="link address"><img src="img/i10.png"></a>
-                <a href="link address"><img src="img/i14.png"></a>
+              <a href="education black.html"><img src="img/i10.png"></a>
+                <a href="health black.html"><img src="img/i14.png"></a>
              
             </div>
             <div class="column"  style="background-color: #211F22;">
-              <a href="link address"><img src="img/i11.png"></a>
-                <a href="link address"><img src="img/i15.png"></a>
+              <a href="ecommerce black.html"><img src="img/i11.png"></a>
+                <a href="energy black.html"><img src="img/i15.png"></a>
             
    
             </div>
             <div class="column"  style="background-color: #211F22;">
-              <a href="link address"> <img src="img/i12.png"></a>
-                <a href="link address"><img src="img/i16.png"></a>
+              <a href="insurance black.html"> <img src="img/i12.png"></a>
+                <a href="travel black.html"><img src="img/i16.png"></a>
        
    
             </div>
@@ -487,7 +417,7 @@
             <p style="font-size: 1.5em;"><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i>  Delicated Team Members</p>
             <p style="font-size: 1.5em;"><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i>  Great Support</p>
             <p style="font-size: 1.5em;"><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i>  Customer First</p><br><br>
-            <a href="#" class="btn btn-light text-light mt-3 w-75" style="background-color: #BC312E; font-size: 2.0em;"></i> Contact Us</a>
+            <a href="aboutus black.html" class="btn btn-light text-light mt-3 w-75" style="background-color: #BC312E; font-size: 2.0em;"></i> Contact Us</a>
           </div>
           <div class="col-md-4 ">
             <img src="img/i17.png" class="img-fluid" alt="ferment" style="width: 100%; ">
@@ -532,9 +462,9 @@
             <p class="align-right" style="
 position: absolute;
 width: 136px;
-height: 44px;
+
 left: 528px;
-top: 6342px;
+
 
 font-family: 'Open Sans';
 font-style: normal;
@@ -739,58 +669,59 @@ color: #7E7E7E;">view all ></p></a>
     </nav>
 
 
-    <section id="learn" class="p-5  text-dark">
-      <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="container text-center text-light">
-          <br><br>  <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Testimonals</strong></h2>
-          <h2 style=" color: rgb(107, 107, 107); font-size: 2.0em;  font-family: Constantia;">What clients say about us</h2>
-          <br><br>
-          
-        </div>
 
 
-<div class="col-md">
+
+
+
+
+
+
+
+
+    
+<section>
   <div class="container">
-    <section class="mx-auto my-5" style="max-width: 50rem; max-height: 60rem;">
-        
-      <div class="card testimonial-card mt-2 mb-3">
-        <div class="card-up aqua-gradient"></div>
-        <div class="avatar mx-auto white">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg" class="rounded-circle img-fluid"
-            alt="woman avatar">
-        </div>
-        <div class="card-body text-center">
-          <h4 class="card-title font-weight-bold">Martha Smith</h4>
-          <h7>CEO Lorem Ipsum</h7>
-          <hr>
-          <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-            adipisci</p>
-        </div>
-        
-      </div>
-      
-      </div>
-      
-    </section>
+<div class="col">
+  <div class="container text-center text-light">
+    <br><br>  <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Testimonals</strong></h2>
+    <h2 style=" color: rgb(107, 107, 107); font-size: 2.0em;  font-family: Constantia;">What clients say about us</h2>
+    <br><br>
+    
   </div>
-  
-</div>
-
-
-
-
-
-
-
-
-
-
-         
-
-        </div>
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="img/381.png" class="d-block w-100" alt="...">
       </div>
-    </section>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="img/381.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/381.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 
     <section id="learn" class="p-5  text-dark">
       <div class="container">
@@ -850,59 +781,59 @@ color: #7E7E7E;">view all ></p></a>
 
 <section id="learn" class="p-5  text-dark">
   <div class="container">
-    <div class="row align-items-center justify-content-between">
-      <div class="container">
-      <br><br>  <h2 class="text-light" style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Featured Blog Posts</strong></h2>
-      <br><br>
-
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
-              alt="Hollywood Sign on The Hill" />
-            <div class="card-body" style="background-color: #211F22;">
-              <h7  style="color: rgba(126, 126, 126, 1);                ">01-JAN-2022<br></h7>
-              <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
-              <p class="card-text"  style="color: rgba(126, 126, 126, 1);                ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                
-              </p>
-            </div>
+  <div class="row align-items-center justify-content-between">
+    <div class="container">
+    <br><br>  <h2 class="text-light" style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Featured Blog Posts</strong></h2>
+    <br><br>
+  
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100" style="background-color: #211F22;">
+          <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
+            alt="Los Angeles Skyscrapers" />
+          <div class="card-body">
+            <h7 style="color: rgba(126, 126, 126, 1);                ">01-JAN-2022<br></h7>
+            <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
+            <p class="card-text"  style="color: rgba(126, 126, 126, 1);                ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+  
+            </p>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
-              alt="Palm Springs Road" />
-            <div class="card-body"  style="background-color: #211F22;">
-              <h7  style="color: rgba(126, 126, 126, 1);                ">01-JAN-2022<br></h7>
-              <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
-              <p class="card-text"  style="color: rgba(126, 126, 126, 1);                ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100" style="background-color: #211F22;">
-            <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
-              alt="Los Angeles Skyscrapers" />
-            <div class="card-body">
-              <h7 style="color: rgba(126, 126, 126, 1);                ">01-JAN-2022<br></h7>
-              <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
-              <p class="card-text"  style="color: rgba(126, 126, 126, 1);                ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-
-              </p>
-            </div>
-          </div>
-        </div>
-       
       </div>
-
+      <div class="col">
+        <div class="card h-100" style="background-color: #211F22;">
+          <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
+            alt="Los Angeles Skyscrapers" />
+          <div class="card-body">
+            <h7 style="color: rgba(126, 126, 126, 1);                ">01-JAN-2022<br></h7>
+            <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
+            <p class="card-text"  style="color: rgba(126, 126, 126, 1);                ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+  
+            </p>
+          </div>
+        </div>
       </div>
+      <div class="col">
+        <div class="card h-100" style="background-color: #211F22;">
+          <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
+            alt="Los Angeles Skyscrapers" />
+          <div class="card-body">
+            <h7 style="color: rgba(126, 126, 126, 1);                ">01-JAN-2022<br></h7>
+            <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
+            <p class="card-text"  style="color: rgba(126, 126, 126, 1);                ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+  
+            </p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  
     </div>
   </div>
-</section>
-
+  </div>
+  </section>
+ 
 
 <section>
   <br>
@@ -1011,7 +942,15 @@ color: #7E7E7E;">view all ></p></a>
   </div>
 </footer>
 
-
+<script>
+    $(document).ready(function() {
+    $("#getMessage").on("click", function(){
+      // Only change code below this line.
+      $(".message").html('Here is the message');
+      // Only change code above this line.
+    });
+  });
+</script>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.js"></script>

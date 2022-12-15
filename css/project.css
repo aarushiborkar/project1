@@ -363,7 +363,7 @@ h1 .type{
 	text-transform: uppercase;
 }
 .navbar a:hover, .d:hover .d-btn {
-	background: #211F22;
+	background: none;
 }
 .d-content {
 	display: none;
@@ -373,7 +373,20 @@ h1 .type{
 	left: 0;
 	z-index: 10;
 }
+.d-contents {
+	display: none;
+	position: absolute;
+	background: #ffffff;
+	width: 100%;
+	left: 0;
+	z-index: 10;
+}
 .d:hover .d-content {
+	display: block;
+}
+
+
+.d:hover .d-contents {
 	display: block;
 }
 

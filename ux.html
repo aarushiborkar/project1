@@ -6,6 +6,7 @@
     <title>project1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="css/project.css" rel="stylesheet">
+    <script src="js/project1.js"></script>
     <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
@@ -13,96 +14,284 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js">
     <link href="	https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-	
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js">
+      <script type="text/javascript">
+        $(document).ready(function() {
+      
+$('.button').first().addClass('active');
+
+$('.button').click(function(){
+  var $this = $(this);
+  $siblings = $this.parent().children(),
+  position = $siblings.index($this);
+  console.log (position);
+  
+  $('.content div').removeClass('active').eq(position).addClass('active');
+  
+  $siblings.removeClass('active');
+  $this.addClass('active');
+})
+      
+        });
+     </script>
 		<link rel="stylesheet" href="css/ionicons.min.css">
 		<link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+  <body class="" style=";">
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark" id="neubar">
       <div class="container">
-        <a class="navbar-brand" href="#" style="font-size: 2.5em;"><i class="bi bi-person-circle"></i> Logo</a>
+        <a class="navbar-brand text-dark" href="#" style="font-size: 2.5em; color: #2b292c;"><i class="bi bi-person-circle" style="color: #2b292c;"></i> Logo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
      
-        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto" style="font-size: 1.5em;">
-            <li class="nav-item">
-              <a class="nav-link mx-2 active" aria-current="page" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Solutions
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Blog</a></li>
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Contact us</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="#">Case study</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Explore
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Blog</a></li>
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Contact us</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Career
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Blog</a></li>
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Contact us</a></li>
-              </ul>
-            </li>
+        <div class=" collapse navbar-collapse " id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto " style="font-size: 1.5em;">
+           
+            <div class="d">
+              <button class="d-btn" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">About <i class="bi bi-chevron-down"></i></button>
+               <div class="d-content">
+                <div class="row">
+               
+                  <div class="column pl-0 p-5 bg-light text-dark" >
             
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="#">Contact Us</a>
-            </li>
-            <li class="nav-itembi bi-moon-fill">
-              <i class="bi bi-moon-fill"></i>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                EN
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Blog</a></li>
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Contact us</a></li>
-              </ul>
-            </li>
-            <button type="button" style="background-color: #BC312E;" class="btn btn- text-light btn-rounded"> Sign Up</button>
+                   
+                  </div>
+                  <div class="column bg-light text-dark">
+                    
+                      
+<hr style="color: rgb(0, 0, 0);">
+<h6> <a href="blog" class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;">Blogs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: rgb(0, 0, 0);">
+<h6> <a href=""  class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;">Achievements &nbsp;&nbsp;&nbsp;&nbsp;
+</a> </h6>
+<hr style="color: rgb(0, 0, 0);">
+<h6> <a href=""  class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;">Sucess Stories &nbsp;&nbsp;&nbsp;&nbsp;
+</a> </h6>
+ <hr style="color: rgb(0, 0, 0);">
+<h6> <a href=""  class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;">Events&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: rgb(0, 0, 0);">
+<h6> <a href=""  class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;"> Reports</a> </h6>
+<hr style="color: rgb(0, 0, 0);">
+<h6> <a href=""  class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;"> Webinars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: rgb(0, 0, 0);">
+                  </div>
+                  <div class="column pt-5 pl-5 bg-light text-dark">
+                    <h2 class="bg-light text-dark" style="font-size: 1.0em; font-family: Constantia;"><strong>We are committed to bringing about change for the betterment of everybody.</strong></h2>
+           <p class="bg-light text-dark" style="color: #C6C6C6;">Every day, our knowledgeable, devoted staff puts our shared convictions into practise. Together, we blend creativity and accumulated wisdom to produce the remarkable.</p>
+                   
+                  </div>
+                  
+                  <div class="column pt-5 pl-5 bg-light text-dark">
+                
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d">
+              <button class="d-btn " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Solutions <i class="bi bi-chevron-down"></i></button>
+               <div class="d-content">
+                <div class="row">
+                  <div class="column-lg-2 bg-light text-dark" style="padding-left: 40%; padding-right:0%;">
+                  <br>
+                  </div>
+                  <div class="column pl-0 p-5 bg-light text-dark" >
+                    <div class="col-md-8 pl-0 bg-light text-dark" >
+                      <div class="shadow col-md p-3 mb-2 bg-light text-dark rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="bg-light text-dark" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
+                        
+                      </div>
+                      <div class="shadow col-md p-3 mb-2 bg-light text-dark rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="bg-light text-dark" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
+                        
+                      </div>   
+                       <div class="shadow col-md p-3 mb-2 bg-light text-dark  rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class=" bg-light text-dark" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column bg-light text-dark">
+                    
+                    <div class="card p-3 bg-light text-dark" style="width: 18rem; background-color: #2b292c;">
+                     <div class="card-body bg-light text-dark" style="background-color: #2b292c;">
+                        <p class="card-text bg-light text-dark " style="font-size: 0.4em; background-color: #2b292c;">
+                          <h4 class="bg-light text-dark">Digital Marketing<br><br></h4>
+                          <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="marketing.html" >Marketing Automation<br><br></a>
+                          <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="email.html" >Email Marketing<br><br></a>
+                          <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="search engine.html" >Search Engine Marketing<br><br></a>
+                          <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="social media.html" >Social Media Marketing<br><br></a>
+                          <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="moblie.html" >Mobile Marketing<br><br></a>
+                       
+                       
+                       
+                       
+                        </p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="column bg-light text-dark">
+                    
+                    <div class="card p-3 bg-light text-dark" style="width: 18rem; background-color: #2b292c;">
+                     <div class="card-body bg-light text-dark" style="background-color: #2b292c;">
+                        <p class="card-text bg-light text-dark " style="font-size: 0.2em; background-color: #2b292c;">
+                          <h4 class="bg-light text-dark" style="font-size: 0.89em;">Analytics and Insights<br><br></h4>
+                          <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="research.html" >Research Intelligence<br><br></a>
+                          <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="Predictive Analysis.html" >Predective Analytics<br><br></a>
+                          <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="business.html" >Business Intelligence<br><br></a>
+                          <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="speech&text.html" >Speech & text Analytics<br><br></a>
+                          <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="customer.html" >Customer Segmentation<br><br></a>
+                       
+                       
+                       
+                       
+                        </p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="column bg-light text-dark">
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d">
+              <button class="d-btn " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Case Study</button>
+              </div>
+              <div class="d">
+                <button class="d-btn" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Career <i class="bi bi-chevron-down"></i></button>
+                 <div class="d-contents">
+                  <div class="row">
+                 
+                    <div class="column pl-0 p-5 bg-light text-dark" >
+              
+                     
+                    </div>
+                    <div class="column bg-light text-dark">
+                      
+                        
+<hr style="color: rgb(0, 0, 0);">
+<h6> <a href="blog" class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;">Blogs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: rgb(0, 0, 0);">
+<h6> <a href=""  class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;">Achievements &nbsp;&nbsp;&nbsp;&nbsp;
+ </a> </h6>
+ <hr style="color: rgb(0, 0, 0);">
+<h6> <a href=""  class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;">Sucess Stories &nbsp;&nbsp;&nbsp;&nbsp;
+ </a> </h6>
+   <hr style="color: rgb(0, 0, 0);">
+<h6> <a href=""  class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;">Events&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: rgb(0, 0, 0);">
+<h6> <a href=""  class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;"> Reports</a> </h6>
+<hr style="color: rgb(0, 0, 0)0, 0, 0);">
+<h6> <a href=""  class="bg-light text-dark" style="font-size: 0.9em; text-decoration: none;"> Webinars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <i class="bi bi-chevron-right"></i></a> </h6>
+<hr style="color: rgb(0, 0, 0);">
+                    </div>
+                    <div class="column bg-light text-dark">
+                      <h3 class="bg-light text-dark">Topics</h3>
+                      <hr>
+<div class="col-md">
+  <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="research black.html" >Digital Research<br><br></a>
+  <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="Predictive Analysis black.html" >DevOps<br><br></a>
+  <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="business black.html" >Sales Intelligence<br><br></a>
+  <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="speech&text black.html" >Legal Consultant<br><br></a>
+  <a class="bg-light text-dark" style="text-decoration: none; font-size: 0.6em;" href="customer black.html" >Marketing Automation<br><br></a>
+
+</div>
+
+
+                     
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            
+            <div class="d">
+              <button class="d-btn " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Contact Us <i class="bi bi-chevron-down"></i></button>
+              <div class="d-contents">
+                <div class="row">
+               
+                  <div class="column pr-0 bg-light text-dark " >
+                    <div class="col bg-light text-dark " style=" border-top-left-radius: 20px;   border-bottom-left-radius: 20px;">
+                      <div class="hover hover-4 text-white " style=" border-top-right-radius: 20px; height: 2020%;  border-bottom-right-radius: 20px; border-top-left-radius: 20px;   border-bottom-left-radius: 20px;" >
+                        <img src="img/171.png" alt="">
+                        <div class="hover-overlay"></div>
+                        <div class="hover-4-content">
+                          <h3 class="hover-4-title  text-uppercase mb-0" style="text-align: center; font-family: Bahnschrift Light; font-size: 1.0em;">APP DEVELOPMENT</h3>
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+                
+          <div class="d">
+            <button class="d-btn " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;"><a href="index.html" style="text-decoration: none; color: #2b292c;"> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+              <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+            </svg></a></button>
+          </div>
+              
+            <div class="d">
+              <button class="d-btn " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">EN <i class="bi bi-chevron-down"></i></button>
+              <div class="d-content">
+                <div class="row">
+                 
+                </div>
+              </div>
+            </div>
+            <div class="d">
+              <button class="d-btn btn btn-  btn-rounded " style="background-color: #BC312E; font-size: 0.7em;">Sign Up</button>
+          </div>
           </ul>
         </div>
       </div>
     </nav>
 
 
-
     <section id="learn" class="p-5  text-dark">
       <div class="container">
         <div class="row align-items-center justify-content-between">
-          <div class="col-md-6 p-5">
-            <h2 style="font-size: 2.5em; color: #BC312E; font-family: Constantia;"><strong>UX /UI Design</strong></h2>
-          <br><br> <p class="lead" style="width: 100%; font-size: 1.7em;">Discover which tactics, website content, and marketing initiatives led to a lead, phone call, or sale by looking beyond the basics of website analytics
-            </p> 
+          <div class="col-md-5 p-5">
+            <h2 style="font-size: 3.5em; color: #BC312E; font-family: Constantia;"><strong>UX /UI Design</strong></h2>
+          <br><br> <p class="lead " style="width: 100%; font-size: 1.7em;">We provide responsive and adaptive designs with consistent cross-platform compatibility using a special combination of contemporary technology and new methodologies.
+          </p> 
            <br>
            <br>
 
          </div>
           <div class="col-md">
-            <img src="33.png" class="img-fluid" alt="ferment" style="width: 120%;">
+            <img src="img/397.png" class="img-fluid" alt="ferment" style="width: 100%; height: 40.5rem;">
           </div>
 
         </div>
@@ -114,23 +303,25 @@
 
 
 
-<section id="learn" class="p-5  text-dark">
+<section id="learn" class=" ">
     <div class="">
       <div class="row align-items-center justify-content-between">
-        <div class=" text-center">
+        <div class=" text-center ">
           <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong> UX /UI Design Services</strong></h2>
         </div><br><br>
 
         <div class="col-md-7 p-5">
-            <h2 style="font-size: 2.0em; color: #BC312E; font-family: Constantia;"><strong>DevOps service for faster time to market</strong></h2>
-          <br><br> <p class="lead" style="width: 100%; font-size: 1.2em;">(Company Name) DevOps emphasizes collaboration, automation, integration, and communication, thus, ensuring agile delivery and removing bottlenecks in software development. DevOps focusses at associating the gap between the operations & development teams, and quicker delivery of applications. Ground-breaking solutions are empowered by reducing the time lost and swiftly bringing innovative competencies in the procurement of responses. As a DevOps consulting partner, we ensure close collaboration between the IT operations team and the software engineering teams. Our expert pool of consultants helps in enhancing your IT processes, to have trust in the software solution. As a skilled DevOps service provider, we focus on a management culture which enhances the entire software setup to complete collaboration, communication, and integration. Our DevOps consulting service manages infrastructure, procedures and tools, delivery and maintenance of software operations.
-        </p> 
+            <h2 style="font-size: 2.0em; color: #BC312E; font-family: Constantia;"><strong>User-centric Design for your Business</strong></h2>
+          <br><br> <p class="lead " style="width: 100%; font-size: 1.2em;">In addition to grabbing the user's attention, having an amazing UI may improve the user experience and strengthen the brand of the company. In order to increase UX, businesses must concentrate on developing immersive UI designs. We at BDM recognise the importance of user-centered designs and the effect they have on the user experience. We make certain that user views are at the centre of our development process so that we can provide improved usability in each of the products we produce.
+ <br><br>
+            Our team of skilled UI/UX designers focuses on user expectations and applies UX design principles at every level of the app development process. We specialise in designing user interfaces that are aesthetically pleasing, simple to use, and completely usable. Our UI design services give our clients access to a scalable and reliable user experience, maximising their ROI and advancing their branding strategy.
+            </p>
            <br>
            <br>
         
          </div>
           <div class="col-md-5"><br><br>
-            <img align="right" src="10.png" class="img-fluid" alt="ferment" style="width: 100%; height: 40.5rem;">
+            <img align="right" src="img/404.png" class="img-fluid" alt="ferment" style="width: 100%; height: 40.5rem; align-content: right;">
           </div>
 
         </div>
@@ -146,16 +337,16 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-md-5">
-            <img src="11.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/385.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="12.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/398.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead" style="width: 100%; font-size: 1.5em; text-align: justify;">It is a crucial component in establishing a DevOps process. We support IT operations with monitoring and management of infrastructure across cloud vendors with our DevOps solutions. We take these steps for your business to avoid any obstacles before they arise. We therefore ensure that you can close the gap between software development, quality assurance, and IT operations with our DevOps solutions.
-         </p> 
-         <img src="13.png" class="img-fluid" alt="ferment" style="width: 100%;">
+        <br><br> <p class="lead " style="width: 100%; font-size: 1.5em; text-align: justify;">We build appealing user flows and aesthetically pleasing interfaces because we are aware of how users engage with websites and mobile applications. The fastest route to a customer's loyalty is through a modern, yet plain, clean, and straightforward UI and UX design.
+          </p>
+         <img src="img/13.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
          <br>
@@ -178,11 +369,11 @@
      
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="19.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/399.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead" style="width: 100%; font-size: 1.5em; text-align: justify;">Automating tedious maintenance procedures using configuration management frees up developer time for creative development. This improves agility for the organisation as a whole as well as for individual developers. It would be accurate to say at this point that Configuration Management is fundamentally required for establishing a DevOps-driven architecture.
-         </p> 
-         <img src="13.png" class="img-fluid" alt="ferment" style="width: 100%;">
+        <br><br> <p class="lead" style="width: 100%; font-size: 1.5em; text-align: justify;">Information architecture is crucial to the average user experience. Cohesive IAs assist in integrating design and architectural ideas. The knowledgeable UI Services team at e-Zest classifies and arranges information into a logical framework. The user goals, business goals, and product usability are all properly matched by our well defined information architecture process.
+          </p>
+         <img src="img/13.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
          <br>
@@ -191,7 +382,7 @@
       
       </div>
         <div class="col-md-5">
-            <img src="18.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/388.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
     
@@ -214,16 +405,16 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-md-5">
-            <img src="15.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/389.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="14.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/400.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead" style="width: 100%; font-size: 1.5em; text-align: justify;">Automation is the application of technology to jobs that require less human involvement. Automation can be used in any industry with repetitive operations, although it is more common in the manufacturing, robotics, and automotive sectors as well as in IT systems and business decision tools in the technology world.
-         </p> 
-         <img src="13.png" class="img-fluid" alt="ferment" style="width: 100%;">
+        <br><br> <p class="lead" style="width: 100%; font-size: 1.5em; text-align: justify;">A competitive analysis offers tactical insights into the characteristics, workflows, and emotions elicited by the design solutions of your rivals. You may strategically build your solution with the aim of creating a better product and/or experience by comprehending these features of rivals' offerings.
+          </p>
+         <img src="img/13.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
          <br>
@@ -246,11 +437,11 @@
      
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="20.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/401.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead" style="width: 100%; font-size: 1.5em; text-align: justify;">By managing infrastructure, apps, tools, procedures, and day-to-day operations, development and environment management may increase agility, automate processes, and shorten time-to-market. We help you maintain your code, automate your platforms, and prepare your server and services for your customers with our environment management services.
-         </p> 
-         <img src="13.png" class="img-fluid" alt="ferment" style="width: 100%;">
+        <br><br> <p class="lead"  style="width: 100%; font-size: 1.5em; text-align: justify;">The goal of user research methodology is to comprehend user behaviour and demands using a variety of methods, including task analysis, surveys, and direct observation. User research is helpful at every stage of the product design process, from initial concept development through the market launch.
+          </p>
+         <img src="img/13.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
          <br>
@@ -259,7 +450,7 @@
       
       </div>
         <div class="col-md-5">
-            <img src="21.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/392.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
     
@@ -282,16 +473,16 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-md-5">
-            <img src="16.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/393.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="17.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/402.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead" style="width: 100%; font-size: 1.5em; text-align: justify;">Code integration, also referred to as CI, enables you to automate tool communication, cutting out human procedures and waste from the value stream. Code inspections assist you in identifying faults in functionality, maintainability, and dependability. Simple errors of omission and commission can be discovered using a code inspection checklist.
-        </p> 
-         <img src="13.png" class="img-fluid" alt="ferment" style="width: 100%;">
+        <br><br> <p class="lead" style="width: 100%; font-size: 1.5em; text-align: justify;">At BDM, we provide a range of digital and graphic design services, from high-end video creation to brand identity. In order to achieve your messaging objectives, we mix the finest user experience with aesthetic design.
+      </p> 
+         <img src="img/13.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
          <br>
@@ -312,11 +503,11 @@
      
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="22.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/403.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead" style="width: 100%; font-size: 1.5em; text-align: justify;">Various software development procedures, such as testing and delivery, are automated by it. It allows the teams working on it to create and test products in simulated and virtual settings using hardware and software that is comparable to that used by end customers. In this manner, testing and development are expedited and take less time.
-         </p> 
-         <img src="13.png" class="img-fluid" alt="ferment" style="width: 100%;">
+        <br><br> <p class="lead " style="width: 100%; font-size: 1.5em; text-align: justify;">To develop the ideal user experiences, interaction designers put a strong emphasis on how customers engage with their goods. Our interface design services provide business executives and developers a visual representation of the most important user scenarios and application flow diagrams, bridging the gap between business needs and specification.
+          </p>
+         <img src="img/13.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
          <br>
@@ -325,7 +516,7 @@
       
       </div>
         <div class="col-md-5">
-            <img src="23.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/396.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
     
@@ -339,161 +530,101 @@
 
 
 
-<section id="learn" class="p-5  text-dark">
-    <div class="container">
-      <div class="row align-items-center justify-content-between">
-        <div class=" container text-center">
-          <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Benefits of DevOps<br><br></strong></h2>
-        </div><br><br>
-        <div class="col-md-1">
-            
-        </div>
-        <div class="col-md">
-            
-<img align="center" src="24.png" style="width: 100%; align-items: center;">
-        </div>
-        <div class="col-md-1">
 
-        </div>
-
-
-      </div>
-    </div>
-</section>
-
-
-
-<section id="learn" class="p-5  text-dark">
-    <div class="container">
-      <div class="row align-items-center justify-content-between">
-        <div class="container text-center">
-          <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>The Value we Add<br></strong></h2>
-        </div><br><br>
-        <br> <p class="lead text-center " style="width: 100%; font-size: 1.7em; color: rgb(92, 92, 92);">Our DevOps services and DevOps solutions offer multiple value-added benefits <br>such as: <br><br> <br>
-         </p> <br><br>
-
-
-<div class="col-md-7" style="font-family: Andale Mono; font-size:1.0em; color:">
-<h3><i class="bi bi-bookmark-check-fill" style="color: #BC312E;"></i>Custom-developed monitoring solution<br><br></h3><br>
-<h3><i class="bi bi-bookmark-check-fill" style="color: #BC312E;" ></i>Automated infrastructure provisioning<br><br></h3><br>
-<h3><i class="bi bi-bookmark-check-fill" style="color: #BC312E;"></i>Resiliency<br><br></h3><br>
-<h3><i class="bi bi-bookmark-check-fill" style="color: #BC312E;"></i>Increased agility<br><br></h3><br>
-
-</div>
-
-
-
-<div class="col-md" style="font-family: Andale Mono; font-size:1.0em; color:">
-    <h3><i class="bi bi-bookmark-check-fill" style="color: #BC312E;"></i>Enhanced quality<br><br></h3><br>
-    <h3><i class="bi bi-bookmark-check-fill" style="color: #BC312E;" ></i>Improved innovation<br><br></h3><br>
-    <h3><i class="bi bi-bookmark-check-fill" style="color: #BC312E;"></i>Reduced outages<br><br></h3><br>
-    <h3><i class="bi bi-bookmark-check-fill" style="color: #BC312E;"></i>Scalability<br><br></h3><br>
-    
-    </div>
-
-      </div>
-      </div>
-</section>
-
-
-
-<section id="learn" class="p-5  text-dark">
-    <div class="container">
-      <div class="row align-items-center justify-content-between">
-        <div class="container text-center">
-          <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Awards & Recognition<br><br><br>
-            </strong></h2>
-        </div><br><br>
-         <br><br>
-         <div class="row">
-            <div class="column">
-              <a href="link address"><img src="data:image/png;base64,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"></a>
-              <br> 
-              <p class="text-center" style="font-size: 1.5em;"><br>Lorem ipsum</p>
-         
-              
-            </div>
-            <div class="column">
-              <a href="link address"><img src="data:image/png;base64,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"></a>
-              <br> 
-              <p class="text-center" style="font-size: 1.5em;"><br>Lorem ipsum</p>
-             
-            </div>
-            <div class="column">
-              <a href="link address"><img src="data:image/png;base64,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"></a>
-              <br> 
-              <p class="text-center" style="font-size: 1.5em;"><br>Lorem ipsum</p>  
-            
-   
-            </div>
-            <div class="column">
-              <a href="link address"> <img src="data:image/png;base64,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"></a>
-              <br> 
-              <p class="text-center" style="font-size: 1.5em;"><br>Lorem ipsum</p>  
+<section id="learn" class="p-5  text-dark" ">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="container text-center">
+        <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Awards & Recognition<br><br><br>
+          </strong></h2>
+      </div><br><br>
+       <br><br>
+       <div class="row" >
+          <div class="column" style="background-color: #ffffff;">
+            <a href="link address"><img src="data:image/png;base64,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"></a>
+            <br> 
+            <p class="text-center" style="font-size: 1.5em;"><br>Lorem ipsum</p>
        
-   
-            </div>
+            
+          </div>
+          <div class="column"  style="background-color: #ffffff;">
+            <a href="link address"><img src="data:image/png;base64,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"></a>
+            <br> 
+            <p class="text-center" style="font-size: 1.5em;"><br>Lorem ipsum</p>
+           
+          </div>
+          <div class="column"  style="background-color: #ffffff;">
+            <a href="link address"><img src="data:image/png;base64,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"></a>
+            <br> 
+            <p class="text-center" style="font-size: 1.5em;"><br>Lorem ipsum</p>  
+          
+ 
+          </div>
+          <div class="column"  style="background-color: #ffffff;">
+            <a href="link address"> <img src="data:image/png;base64,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"></a>
+            <br> 
+            <p class="text-center" style="font-size: 1.5em;"><br>Lorem ipsum</p>  
+     
+ 
+          </div>
 
-         </div>
+       </div>
 
 
-      </div>
     </div>
+  </div>
 </section>
-
-
-
-
+<br><br><br><br><br><br>
 
 
 <section id="learn" class="p-5  text-dark">
-    <div class="container">
-      <div class="row align-items-center justify-content-between">
-        <div class="container">
-        <br><br>  <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Our Recent Projects</strong></h2>
-        <br><br>
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="container">
+      <br><br>  <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Our Recent Projects</strong></h2>
+      <br><br>
 
 
 
-        <div class="card-group">
-          <div class="card">
-            <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
-              alt="Hollywood Sign on The Hill" />
-            <div class="card-body">
-              <h5 class="card-title" style="color:#BC312E ;">Company Name</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
-              <p class="card-text">
-                <small class="text-muted">UX/UI DESIGN | WEB DEVELOPMENT | API DEVELOPMENT</small>
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
-              alt="Palm Springs Road" />
-            <div class="card-body">
-              <h5 class="card-title" style="color:#BC312E ;">Company Name</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
-              <p class="card-text">
-                <small class="text-muted">UX/UI DESIGN | WEB DEVELOPMENT | API DEVELOPMENT
-                </small>
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
-              alt="Los Angeles Skyscrapers" />
-            <div class="card-body">
-              <h5 class="card-title" style="color:#BC312E ;">Company Name</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              </p>
-              <p class="card-text">
-                <small class="text-muted">UX/UI DESIGN | WEB DEVELOPMENT | API DEVELOPMENT</small>
-              </p>
-            </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
+            alt="Hollywood Sign on The Hill" />
+          <div class="card-body">
+            <h5 class="card-title" style="color:#BC312E ;">Company Name</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+            <p class="card-text">
+              <small class="text-muted">UX/UI DESIGN | WEB DEVELOPMENT | API DEVELOPMENT</small>
+            </p>
           </div>
         </div>
+        <div class="card">
+          <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
+            alt="Palm Springs Road" />
+          <div class="card-body">
+            <h5 class="card-title" style="color:#BC312E ;">Company Name</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+            <p class="card-text">
+              <small class="text-muted">UX/UI DESIGN | WEB DEVELOPMENT | API DEVELOPMENT
+              </small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
+            alt="Los Angeles Skyscrapers" />
+          <div class="card-body">
+            <h5 class="card-title" style="color:#BC312E ;">Company Name</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            </p>
+            <p class="card-text">
+              <small class="text-muted">UX/UI DESIGN | WEB DEVELOPMENT | API DEVELOPMENT</small>
+            </p>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -505,56 +636,56 @@
 
 <section id="learn" class="p-5  text-dark">
 <div class="container">
-  <div class="row align-items-center justify-content-between">
-    <div class="container">
-    <br><br>  <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Featured Blog Posts</strong></h2>
-    <br><br>
+<div class="row align-items-center justify-content-between">
+  <div class="container">
+  <br><br>  <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Featured Blog Posts</strong></h2>
+  <br><br>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
-            alt="Hollywood Sign on The Hill" />
-          <div class="card-body">
-            <h7>01-JAN-2022<br></h7>
-            <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              
-            </p>
-          </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
+          alt="Hollywood Sign on The Hill" />
+        <div class="card-body">
+          <h7>01-JAN-2022<br></h7>
+          <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            
+          </p>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
-            alt="Palm Springs Road" />
-          <div class="card-body">
-            <h7>01-JAN-2022<br></h7>
-            <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
-            alt="Los Angeles Skyscrapers" />
-          <div class="card-body">
-            <h7>01-JAN-2022<br></h7>
-            <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-
-            </p>
-          </div>
-        </div>
-      </div>
-     
     </div>
-
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
+          alt="Palm Springs Road" />
+        <div class="card-body">
+          <h7>01-JAN-2022<br></h7>
+          <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            
+          </p>
+        </div>
+      </div>
     </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" class="card-img-top"
+          alt="Los Angeles Skyscrapers" />
+        <div class="card-body">
+          <h7>01-JAN-2022<br></h7>
+          <h5 class="card-title" style="color: #BC312E ;"><br>BLOG TITLE</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+
+          </p>
+        </div>
+      </div>
+    </div>
+   
   </div>
+
+  </div>
+</div>
 </div>
 </section>
 
@@ -576,93 +707,89 @@
 
 
 
-
-
-
-
 <footer class="footer-02" style="background-color: #BC312E;">
 <div class="container " style="background-color: #BC312E;">
-  <div class="row justify-content-center">
-   
-    <div class="col-10 col-lg-6">
-      
-      <div class="subscribe mb-5">
-        <form action="#" class="subscribe-form">
-          <div class="form-group d-flex">
-            <input type="text" class="form-control rounded-left" placeholder="Enter email address">
-            <input type="submit" value="Subscribe" class="form-control submit px-3" style="background-color: #BC312E;">
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="row " style="background-color: #BC312E;">
-    <div class="col-md-4 col-lg-5" >
-      <div class="row">
-        <div class="col-md-12 col-lg-8 mb-md-0 mb-4">
-          <h2 class="footer-heading" style="font-size: 3.0em; font-family:Century Gothic;">LOGO</h2>
-       </div>
-      </div>
-    </div>
-    <div class="col-md-8 col-lg-7">
-      <div class="row">
-      
-        <div class="col-md-3 mb-md-0 mb-4 border-left">
-          <h2 class="footer-heading">About</h2>
-          <h2 class="footer-heading">Solutions</h2>
-          <h2 class="footer-heading">Case Study</h2>
-          <h2 class="footer-heading">Explore</h2>
-          <h2 class="footer-heading">Career</h2>
-        
-        </div>
-     
-
-        <div class="col-md-3 mb-md-0 mb-4 border-left">
-          
-        </div>
-     
-
-        <div class="col-md-4 mb-md-0 mb-4 border-left">
-          <h2 class="footer-heading">Contact Us</h2>
-          <p style="color: #fff;"><i class="bi bi-envelope"></i> company@company.in</p><br><br>
-          <h2 class="footer-heading">Ready To Talk</h2>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Talk with expert.." aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-light" type="button" id="button-addon2">-></button>
-          </div>
-        </div>
-     
-
-      </div>
-    </div>
-  </div>
+<div class="row justify-content-center">
  
+  <div class="col-10 col-lg-6">
+    
+    <div class="subscribe mb-5">
+      <form action="#" class="subscribe-form">
+        <div class="form-group d-flex" >
+          <input type="text" class="form-control rounded-left "placeholder="Enter email address">
+          <input type="submit" value="Subscribe" class="form-control submit px-3" style="background-color: #BC312E;">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="row " style="background-color: #BC312E;">
+  <div class="col-md-4 col-lg-5" >
+    <div class="row">
+      <div class="col-md-12 col-lg-8 mb-md-0 mb-4">
+        <h2 class="footer-heading" style="font-size: 3.0em; font-family:Century Gothic;">LOGO</h2>
+     </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-lg-7">
+    <div class="row">
+    
+      <div class="col-md-3 mb-md-0 mb-4 border-left">
+        <h2 class="footer-heading">About</h2>
+        <h2 class="footer-heading">Solutions</h2>
+        <h2 class="footer-heading">Case Study</h2>
+        <h2 class="footer-heading">Explore</h2>
+        <h2 class="footer-heading">Career</h2>
+      
       </div>
+   
+
+      <div class="col-md-3 mb-md-0 mb-4 border-left">
+        
+      </div>
+   
+
+      <div class="col-md-4 mb-md-0 mb-4 border-left">
+        <h2 class="footer-heading">Contact Us</h2>
+        <p style="color: #fff;"><i class="bi bi-envelope"></i> company@company.in</p><br><br>
+        <h2 class="footer-heading">Ready To Talk</h2>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Talk with expert.." aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-outline-light" type="button" id="button-addon2">-></button>
+        </div>
+      </div>
+   
+
     </div>
   </div>
-  <hr style="color: #fff; height: 200%;">
-  
-  <div class="row mt-5">
-    <div class="col-md-3 col-lg-4">
-      &nbsp;&nbsp;
-      <p class="copyright" style="color: #fff;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+</div>
+
+    </div>
+  </div>
+</div>
+<hr style="color: #fff; height: 200%;">
+
+<div class="row mt-5">
+  <div class="col-md-3 col-lg-4">
+    &nbsp;&nbsp;
+    <p class="copyright" style="color: #fff;">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
 </p>
-    </div>
-    <div class="col-md-6 col-lg-8 text-light text-md-right">
-      <p class="text-light" style="color: #fff;">
-        Sustainability&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Accessibility&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      Terms of Use&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Privacy Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Cookie Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Sitemap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  
-      </p>
-    </div>
   </div>
+  <div class="col-md-6 col-lg-8 text-light text-md-right">
+    <p class="text-light" style="color: #fff;">
+      Sustainability&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Accessibility&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Terms of Use&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Privacy Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Cookie Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Sitemap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    </p>
+  </div>
+</div>
 </div>
 </footer>
 
@@ -673,6 +800,6 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

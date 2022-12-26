@@ -6,6 +6,8 @@
     <title>project1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="css/project.css" rel="stylesheet">
+    <script src="js/project1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
@@ -13,13 +15,37 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js">
     <link href="	https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-	
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js">
+      <script type="text/javascript">
+        $(document).ready(function() {
+      
+$('.button').first().addClass('active');
+
+$('.button').click(function(){
+  var $this = $(this);
+  $siblings = $this.parent().children(),
+  position = $siblings.index($this);
+  console.log (position);
+  
+  $('.content div').removeClass('active').eq(position).addClass('active');
+  
+  $siblings.removeClass('active');
+  $this.addClass('active');
+})
+      
+        });
+     </script>
 		<link rel="stylesheet" href="css/ionicons.min.css">
 		<link rel="stylesheet" href="css/style.css">
   </head>
-  <body style="background-color: #211F22;">
+  <body class="" style="background-color: #211F22;">
+
+
+
+    
 
 
 
@@ -28,268 +54,215 @@
 
 
 
-    <nav class="navbar navbar-expand-sm navbar-dark" id="neubar">
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark" id="neubar" >
       <div class="container">
         <a class="navbar-brand text-light" href="#" style="font-size: 2.5em;"><i class="bi bi-person-circle"></i> Logo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
      
-        <div class=" collapse navbar-collapse text-light" id="navbarNavDropdown">
+        <div class=" collapse navbar-collapse text-light" id="navbarNavDropdown" style="float: right;">
           <ul class="navbar-nav ms-auto text-light" style="font-size: 1.5em;">
            
-            <div class="d text-light">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">About⮟</button>
-              <div class="d-content">
-                <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column">
-                    
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div class="d">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Solutions⮟</button>
-              <div class="d-content">
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;"><a href="aboutus black.html" style="text-decoration: none; color: #fff;">About Us</a> <i class="bi bi-chevron-down"></i></button>
+               <div class="d-content">
+                <div class="row">
+               
+                  <div class="col-md-2" >
+            
+                   
+                  </div>
+                  <div class="col-md-3">
+                    <hr style="color: #fff;">
+                    <h6> <a href="overview black.html" class="text-light" style="text-decoration: none;">Overview <span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                    <hr style="color: #fff;">
+                    <h6> <a href="leadership black.html"  class="text-light" style="text-decoration: none;">Leadership<span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                    <hr style="color: #fff;">
+                    <h6> <a href="vision black.html"  class="text-light" style="text-decoration: none;">Vision, Mission & Values</a> </h6>
+                    <hr style="color: #fff;">
+                    <h6> <a href="policy black.html"  class="text-light" style="text-decoration: none;">  Policies & Charters <span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                    <hr style="color: #fff;">
+                    <h6> <a href="global black.html"  class="text-light" style="text-decoration: none;">Global Affiliation<span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                    <hr style="color: #fff;">
+                    <h6> <a href=""  class="text-light" style="text-decoration: none;">Code of Conduct</a> </h6>
+                    <hr style="color: #fff;">
+                  </div>
+                  <div class="col-md-1 pt-3 pl-5">
+                    
+                  </div>
+                  <div class="col-md-4 pt-3 pl-5">
+                    <h2 class="text-light" style="font-size: 1.2em; font-family: Constantia;"><strong>We are committed to bringing about change for the betterment of everybody.</strong></h2>
+           <p class="" style="color: #C6C6C6; font-size: 0.8em;"><br>Every day, our knowledgeable, devoted staff puts our shared convictions into practise. Together, we blend creativity and accumulated wisdom to produce the remarkable.</p>
+                   
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="d">
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Solutions <i class="bi bi-chevron-down"></i></button>
+               <div class="d-content">
                 <div class="row">
                   <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
                   <br>
                   </div>
-                  <div class="column pl-0 p-5" style="color: black; ">
-                    <div class="col-md-8 pl-0" style=" border-top-left-radius: 25px;   border-bottom-left-radius: 25px;">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
+                  <div class="column pl-0 p-5" >
+                    <div class="col-md-8 pl-0" >
+                      <div class="shadow col-md p-3 mb-2  rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="text-light" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
                         
                       </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
+                      <div class="shadow col-md p-3 mb-2  rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="text-light" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
+                        
+                      </div>   
+                       <div class="shadow col-md p-3 mb-2  rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="text-light" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
+                        
                       </div>
                     </div>
                   </div>
                   <div class="column">
                     
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
+                    <div class="card p-3 " style="width: 18rem; background-color: #2b292c;">
+                     <div class="card-body " style="background-color: #2b292c;">
+                        <p class="card-text  text-light" style="font-size: 0.4em; background-color: #2b292c;">
+                          <h4>Digital Marketing<br><br></h4>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="marketing black.html" >Marketing Automation<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="email black.html" >Email Marketing<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="search engine black.html" >Search Engine Marketing<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="social mrdia blck.html" >Social Media Marketing<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="moblie black.html" >Mobile Marketing<br><br></a>
+                       
+                       
+                       
+                       
+                        </p>
+                        </div>
                     </div>
                   </div>
-                
                   <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
+                    
+                    <div class="card p-3 " style="width: 18rem; background-color: #2b292c;">
+                     <div class="card-body " style="background-color: #2b292c;">
+                        <p class="card-text  text-light" style="font-size: 0.2em; background-color: #2b292c;">
+                          <h4 style="font-size: 0.89em;">Analytics and Insights<br><br></h4>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="research black.html" >Research Intelligence<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="Predictive Analysis black.html" >Predective Analytics<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="business black.html" >Business Intelligence<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="speech&text black.html" >Speech & text Analytics<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="customer black.html" >Customer Segmentation<br><br></a>
+                       
+                       
+                       
+                       
+                        </p>
+                        </div>
+                    </div>
                   </div>
                   <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
+                   
                   </div>
                 </div>
               </div>
             </div>
+            <div class="d">
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;"><a href="casestudy black.html" style="text-decoration: none; color: #fff;">Case Study</a></button>
+              </div>
+              <div class="d">
+                <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Career <i class="bi bi-chevron-down"></i></button>
+                 <div class="d-content">
+                  <div class="row">
                  
-            <div class="d">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Case Study</button>
-            </div>
-            <div class="d">
-              <button class="d-btn text-light " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Explore⮟</button>
-              <div class="d-content">
-                <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column">
-                    
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="d">
-              <button class="d-btn text-light " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Career⮟</button>
-              <div class="d-content">
-                <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column">
-                    
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                
-            <div class="d">
-              <button class="d-btn text-light " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Contact Us</button>
-          </div>
-                
-          <div class="d">
-            <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">☾</button>
-        </div>
+                    <div class="col-md-2" >
               
-            <div class="d">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">EN⮟</button>
-              <div class="d-content">
-                <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
+                     
                     </div>
-                  </div>
-                  <div class="column">
+                    <div class="col-md-3">
+                      
+                      <hr style="color: #fff;">
+                      <h6> <a href="" class="text-light" style="text-decoration: none;">Blogs <span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                      <hr style="color: #fff;">
+                      <h6> <a href=""  class="text-light" style="text-decoration: none;">Achievements</a> </h6>
+                      <hr style="color: #fff;">
+                      <h6> <a href=""  class="text-light" style="text-decoration: none;">Success Stories</a> </h6>
+                      <hr style="color: #fff;">
+                      <h6> <a href=""  class="text-light" style="text-decoration: none;"> Events<span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                      <hr style="color: #fff;">
+                   
+                      <h6> <a href=""  class="text-light" style="text-decoration: none;">Report</a> </h6>
+                      <hr style="color: #fff;">
+                      <h6> <a href=""  class="text-light" style="text-decoration: none;">Webinars<span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                      <hr style="color: #fff;">
+                    </div>
+                    <div class="col-md-5 pt-3">
+                      <h3>Topics</h3>
+                      <hr>
+
+                       <a href="research black.html" class="text-light" style="text-decoration: none;">Digital Reasearch</a>
+                       <a href="research black.html" class="text-light" style="text-decoration: none; float: right; text-align: left;">Digital Reasearch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> <br>
+                      <a href="devops black.html"  class="text-light" style="text-decoration: none; text-align: left;">DevOps</a>
+                      <a href="devops black.html" class="text-light" style="text-decoration: none; float: right;">DevOps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a> <br>
+                       <a href=""  class="text-light" style="text-decoration: none;">Sales Intelligence</a> 
+                       <a href="" class="text-light" style="text-decoration: none; float: right;">Sales Intelligence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a><br>
+                      <a href="legal black.html"  class="text-light" style="text-decoration: none;"> Legal Consultant</a>
+                      <a href="legal black.html" class="text-light" style="text-decoration: none; float: right;" >Legal Consultant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;</a><br>
+                      <a href="marketing black.html"  class="text-light" style="text-decoration: none;">Marketing Automation</a>
+                      <a href="marketing black.html" class="text-light" style="text-decoration: none; float: right;">Marketing Automation</a><br>
+                   </div>    
+                     
+  
+
+                     
+                    </div>
                     
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
                   </div>
                 </div>
+              
+            
+              <div class="d">
+                <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;"><a href="contactus black.html" style="text-decoration: none; color: #fff;">Contact Us</a></button>
+           </div>
+                  
+          <div class="d">
+            <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;"><a href="home.html" style="text-decoration: none; color: #fff;"><i class="bi bi-brightness-high-fill"></i></a></button>
+       </div>
+              
+           <div class="d dropdown">
+                <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">EN <i class="bi bi-chevron-down"></i></button>
+             
+              
+<form class="dropdown-menu" action="/action_page.php">
+  
+ 
+    <label for="html">English (EN)</label>
+     <input type="radio" id="html" name="fav_language" value="HTML" style=""><br>
+  
+    <label for="css">Arabic (AR)</label>
+   <input type="radio" id="html" name="fav_language" value="HTML"><br>
+    <label for="css">German (DO)</label>
+  <input type="radio" id="html" name="fav_language" value="HTML"><br>
+    <label for="javascript">Korean (KO)</label>
+    <input type="radio" id="html" name="fav_language" value="HTML"><br>
+  
+  
+  
+  </form>
               </div>
             </div>
-            <div class="d">
-              <button class="d-btn btn btn- text-light btn-rounded " style="background-color: #BC312E; font-size: 0.7em;">Sign Up</button>
+            <div class="d" style="">
+              <button class="d-btn btn btn- text-light btn-rounded " style="background-color: #BC312E; font-size: 0.7em;" style="float: right;"><a href="careerlogin black.html" style="text-decoration: none; color: #fff;">Sign Up</a></button>
           </div>
           </ul>
         </div>
@@ -330,15 +303,18 @@
         </div><br><br>
 
         <div class="col-md-7 p-5">
-            <h2 style="font-size: 2.0em; color: #BC312E; font-family: Constantia;"><strong>DevOps service for faster time to market</strong></h2>
-          <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.2em;">(Company Name) DevOps emphasizes collaboration, automation, integration, and communication, thus, ensuring agile delivery and removing bottlenecks in software development. DevOps focusses at associating the gap between the operations & development teams, and quicker delivery of applications. Ground-breaking solutions are empowered by reducing the time lost and swiftly bringing innovative competencies in the procurement of responses. As a DevOps consulting partner, we ensure close collaboration between the IT operations team and the software engineering teams. Our expert pool of consultants helps in enhancing your IT processes, to have trust in the software solution. As a skilled DevOps service provider, we focus on a management culture which enhances the entire software setup to complete collaboration, communication, and integration. Our DevOps consulting service manages infrastructure, procedures and tools, delivery and maintenance of software operations.
-        </p> 
+            <h2 style="font-size: 2.0em; color: #BC312E; font-family: Constantia;"><strong>Promote Your Business's News and Story
+              on the Right Platform</strong></h2>
+          <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.2em;">Social media marketing is the practice of using social media to promote brands, develop niche fan bases, improve website traffic, and eventually boost revenue. In order to build their brand and online presence on platforms where their target audience is already perusing, small companies and entrepreneurs may do so through social media marketing. Understanding how to sell on social media is more important for reaching your target demographics and building brand recognition as social media usage continues to expand tremendously. However, a lot of marketers dive into the world of digital and social media marketing without having a complete knowledge of what social media marketing is and what it entails.
+            <br><br>
+            To assist you in starting your campaign, our social media marketing professionals break down the differences between business-to-business (B2B) and business-to-consumer (B2C) social media marketing.
+            </p>
            <br>
            <br>
         
          </div>
           <div class="col-md-5"><br><br>
-            <img align="right" src="img/i24.png" class="img-fluid" alt="ferment" style="width: 100%; height: 40.5rem; align-content: right;">
+            <img align="right" src="img/528.png" class="img-fluid" alt="ferment" style="width: 100%; height: 40.5rem; align-content: right;">
           </div>
 
         </div>
@@ -354,15 +330,15 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-md-5">
-            <img src="img/11.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/529.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="img/76.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/530.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.5em; text-align: justify;">It is a crucial component in establishing a DevOps process. We support IT operations with monitoring and management of infrastructure across cloud vendors with our DevOps solutions. We take these steps for your business to avoid any obstacles before they arise. We therefore ensure that you can close the gap between software development, quality assurance, and IT operations with our DevOps solutions.
-         </p> 
+        <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.5em; text-align: justify;">Social networking is the practise of maintaining contact with friends, family, coworkers, and consumers using web-based social media platforms. Through websites like Facebook, Twitter, Instagram, and Pinterest, social networking may serve a social purpose, a business purpose, or both.
+          </p>
          <img src="img/77.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
@@ -386,10 +362,10 @@
      
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="img/78.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/531.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.5em; text-align: justify;">Automating tedious maintenance procedures using configuration management frees up developer time for creative development. This improves agility for the organisation as a whole as well as for individual developers. It would be accurate to say at this point that Configuration Management is fundamentally required for establishing a DevOps-driven architecture.
-         </p> 
+        <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.5em; text-align: justify;">Companies may identify & store interesting information to include in their schedule by using social bookmarking. This is a great method to make content selection simpler & hasten social media growth. The majority of social bookmarking websites enable businesses to identify which subjects are trending, most current, or connected to a certain issue.
+          </p>
          <img src="img/77.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
@@ -399,7 +375,7 @@
       
       </div>
         <div class="col-md-5">
-            <img src="img/18.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/532.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
     
@@ -422,15 +398,15 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-md-5">
-            <img src="img/15.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/533.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="img/79.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/534.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.5em; text-align: justify;">Automation is the application of technology to jobs that require less human involvement. Automation can be used in any industry with repetitive operations, although it is more common in the manufacturing, robotics, and automotive sectors as well as in IT systems and business decision tools in the technology world.
-         </p> 
+        <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.5em; text-align: justify;">The key advantage of Social News is that it maintains your company in the public eye. By ensuring that they keep up to date and in contact with their target audience, various social platforms assist journalists and public relations professionals in enhancing the public's knowledge of their brand and overall corporate image.
+          </p>
          <img src="img/77.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
@@ -454,10 +430,10 @@
      
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="img/80.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/535.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead text-light"  style="width: 100%; font-size: 1.5em; text-align: justify;">By managing infrastructure, apps, tools, procedures, and day-to-day operations, development and environment management may increase agility, automate processes, and shorten time-to-market. We help you maintain your code, automate your platforms, and prepare your server and services for your customers with our environment management services.
-         </p> 
+        <br><br> <p class="lead text-light"  style="width: 100%; font-size: 1.5em; text-align: justify;">Platforms for sharing media provide companies the opportunity to produce photos and movies that reflect their brand's image and values as well as to increase their visibility and get the support of a specific user base. The utilization of graphics to convey a message that customers can identify to or aspire to is what gives these platforms their enormous appeal.
+          </p>
          <img src="img/77.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
@@ -467,7 +443,7 @@
       
       </div>
         <div class="col-md-5">
-            <img src="img/21.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/536.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
     
@@ -490,15 +466,15 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-md-5">
-            <img src="img/16.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/537.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="img/81.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/538.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.5em; text-align: justify;">Code integration, also referred to as CI, enables you to automate tool communication, cutting out human procedures and waste from the value stream. Code inspections assist you in identifying faults in functionality, maintainability, and dependability. Simple errors of omission and commission can be discovered using a code inspection checklist.
-        </p> 
+        <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.5em; text-align: justify;">Microblogging is the practise of creating brief blog posts with a direct, time-sensitive audience. These short blogs can comprise several material types, such as audio, text, photographs, or video, and are shared utilising social networking sites like Twitter or Instagram.
+          </p>
          <img src="img/77.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
@@ -520,10 +496,10 @@
      
         <div class="col-md-7 p-5">
             <div class="col-md">
-                <img src="img/82.png" class="img-fluid" alt="ferment" style="width: 100%;">
+                <img src="img/539.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
-        <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.5em; text-align: justify;">Various software development procedures, such as testing and delivery, are automated by it. It allows the teams working on it to create and test products in simulated and virtual settings using hardware and software that is comparable to that used by end customers. In this manner, testing and development are expedited and take less time.
-         </p> 
+        <br><br> <p class="lead text-light" style="width: 100%; font-size: 1.5em; text-align: justify;">The Social Media Forums may be helpful to businesses, startups, and marketers alike. You may obtain advice on social media for your enterprises or ask questions. This social media forum will cover a wide range of topics, including forums for Facebook, Twitter, LinkedIn, Instagram, etc.
+          </p>
          <img src="img/77.png" class="img-fluid" alt="ferment" style="width: 100%;">
               
          <br>
@@ -533,7 +509,7 @@
       
       </div>
         <div class="col-md-5">
-            <img src="img/23.png" class="img-fluid" alt="ferment" style="width: 100%;">
+            <img src="img/540.png" class="img-fluid" alt="ferment" style="width: 100%;">
           </div>
   
     
@@ -545,63 +521,6 @@
 
 
 
-
-
-<section id="learn" class="p-5  text-dark">
-    <div class="container">
-      <div class="row align-items-center justify-content-between">
-        <div class=" container text-center text-light">
-          <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>Benefits of DevOps<br><br></strong></h2>
-        </div><br><br>
-        <div class="col-md-1">
-            
-        </div>
-        <div class="col-md">
-            
-<img align="center" src="img/83.png" style="width: 100%; align-items: center;">
-        </div>
-        <div class="col-md-1">
-
-        </div>
-
-
-      </div>
-    </div>
-</section>
-
-
-
-<section id="learn" class="p-5  text-dark">
-    <div class="container">
-      <div class="row align-items-center justify-content-between">
-        <div class="container text-center text-light">
-          <h2 style=" text-decoration: underline; font-size: 3.0em;  font-family: Constantia;"><strong>The Value we Add<br></strong></h2>
-        </div><br><br>
-        <br> <p class="lead text-center " style="width: 100%; font-size: 1.7em; color: rgb(92, 92, 92);">Our DevOps services and DevOps solutions offer multiple value-added benefits <br>such as: <br><br> <br>
-         </p> <br><br>
-
-
-<div class="col-md-7 text-light" style="font-family: Andale Mono; font-size:1.0em; color:">
-<h3><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i> Custom-developed monitoring solution<br><br></h3><br>
-<h3><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i> Automated infrastructure provisioning<br><br></h3><br>
-<h3><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i> Resiliency<br><br></h3><br>
-<h3><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i> Increased agility<br><br></h3><br>
-
-</div>
-
-
-
-<div class="col-md text-light" style="font-family: Andale Mono; font-size:1.0em;">
-    <h3><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i> Enhanced quality<br><br></h3><br>
-    <h3><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i> Improved innovation<br><br></h3><br>
-    <h3><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i> Reduced outages<br><br></h3><br>
-    <h3><i class="bi bi-shield-fill-check" style="color: #BC312E;"></i> Scalability<br><br></h3><br>
-    
-    </div>
-
-      </div>
-      </div>
-</section>
 
 
 
@@ -635,7 +554,7 @@
    
             </div>
             <div class="column" style="background-color: #211F22;">
-              <a href="link address"><img src="87.png"></a>
+              <a href="link address"><img src="img/87.png"></a>
               <br> 
               <p class="text-center text-light" style="font-size: 1.5em;"><br>Lorem ipsum</p>  
        

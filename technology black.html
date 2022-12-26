@@ -6,6 +6,8 @@
     <title>project1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="css/project.css" rel="stylesheet">
+    <script src="js/project1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
@@ -13,13 +15,37 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js">
     <link href="	https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-	
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js">
+      <script type="text/javascript">
+        $(document).ready(function() {
+      
+$('.button').first().addClass('active');
+
+$('.button').click(function(){
+  var $this = $(this);
+  $siblings = $this.parent().children(),
+  position = $siblings.index($this);
+  console.log (position);
+  
+  $('.content div').removeClass('active').eq(position).addClass('active');
+  
+  $siblings.removeClass('active');
+  $this.addClass('active');
+})
+      
+        });
+     </script>
 		<link rel="stylesheet" href="css/ionicons.min.css">
 		<link rel="stylesheet" href="css/style.css">
   </head>
-  <body style="background-color: #211F22;">
+  <body class="" style="background-color: #211F22;">
+
+
+
+    
 
 
 
@@ -28,276 +54,220 @@
 
 
 
-    <nav class="navbar navbar-expand-sm navbar-dark" id="neubar">
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark" id="neubar" >
       <div class="container">
         <a class="navbar-brand text-light" href="#" style="font-size: 2.5em;"><i class="bi bi-person-circle"></i> Logo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
      
-        <div class=" collapse navbar-collapse text-light" id="navbarNavDropdown">
+        <div class=" collapse navbar-collapse text-light" id="navbarNavDropdown" style="float: right;">
           <ul class="navbar-nav ms-auto text-light" style="font-size: 1.5em;">
            
-            <div class="d text-light">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">About⮟</button>
-              <div class="d-content">
-                <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column">
-                    
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div class="d">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Solutions⮟</button>
-              <div class="d-content">
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;"><a href="aboutus black.html" style="text-decoration: none; color: #fff;">About Us</a> <i class="bi bi-chevron-down"></i></button>
+               <div class="d-content">
+                <div class="row">
+               
+                  <div class="col-md-2" >
+            
+                   
+                  </div>
+                  <div class="col-md-3">
+                    <hr style="color: #fff;">
+                    <h6> <a href="overview black.html" class="text-light" style="text-decoration: none;">Overview <span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                    <hr style="color: #fff;">
+                    <h6> <a href="leadership black.html"  class="text-light" style="text-decoration: none;">Leadership<span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                    <hr style="color: #fff;">
+                    <h6> <a href="vision black.html"  class="text-light" style="text-decoration: none;">Vision, Mission & Values</a> </h6>
+                    <hr style="color: #fff;">
+                    <h6> <a href="policy black.html"  class="text-light" style="text-decoration: none;">  Policies & Charters <span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                    <hr style="color: #fff;">
+                    <h6> <a href="global black.html"  class="text-light" style="text-decoration: none;">Global Affiliation<span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                    <hr style="color: #fff;">
+                    <h6> <a href=""  class="text-light" style="text-decoration: none;">Code of Conduct</a> </h6>
+                    <hr style="color: #fff;">
+                  </div>
+                  <div class="col-md-1 pt-3 pl-5">
+                    
+                  </div>
+                  <div class="col-md-4 pt-3 pl-5">
+                    <h2 class="text-light" style="font-size: 1.2em; font-family: Constantia;"><strong>We are committed to bringing about change for the betterment of everybody.</strong></h2>
+           <p class="" style="color: #C6C6C6; font-size: 0.8em;"><br>Every day, our knowledgeable, devoted staff puts our shared convictions into practise. Together, we blend creativity and accumulated wisdom to produce the remarkable.</p>
+                   
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="d">
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Solutions <i class="bi bi-chevron-down"></i></button>
+               <div class="d-content">
                 <div class="row">
                   <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
                   <br>
                   </div>
-                  <div class="column pl-0 p-5" style="color: black; ">
-                    <div class="col-md-8 pl-0" style=" border-top-left-radius: 25px;   border-bottom-left-radius: 25px;">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
+                  <div class="column pl-0 p-5" >
+                    <div class="col-md-8 pl-0" >
+                      <div class="shadow col-md p-3 mb-2  rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="text-light" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
                         
                       </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
+                      <div class="shadow col-md p-3 mb-2  rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="text-light" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
+                        
+                      </div>   
+                       <div class="shadow col-md p-3 mb-2  rounded text-center active" style="background-color: #2b292c;" >
+                        <h2 class="text-light" style="background-color: #2b292c; font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
+                        
                       </div>
                     </div>
                   </div>
                   <div class="column">
                     
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
+                    <div class="card p-3 " style="width: 18rem; background-color: #2b292c;">
+                     <div class="card-body " style="background-color: #2b292c;">
+                        <p class="card-text  text-light" style="font-size: 0.4em; background-color: #2b292c;">
+                          <h4>Digital Marketing<br><br></h4>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="marketing black.html" >Marketing Automation<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="email black.html" >Email Marketing<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="search engine black.html" >Search Engine Marketing<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="social mrdia blck.html" >Social Media Marketing<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="moblie black.html" >Mobile Marketing<br><br></a>
+                       
+                       
+                       
+                       
+                        </p>
+                        </div>
                     </div>
                   </div>
-                
                   <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
+                    
+                    <div class="card p-3 " style="width: 18rem; background-color: #2b292c;">
+                     <div class="card-body " style="background-color: #2b292c;">
+                        <p class="card-text  text-light" style="font-size: 0.2em; background-color: #2b292c;">
+                          <h4 style="font-size: 0.89em;">Analytics and Insights<br><br></h4>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="research black.html" >Research Intelligence<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="Predictive Analysis black.html" >Predective Analytics<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="business black.html" >Business Intelligence<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="speech&text black.html" >Speech & text Analytics<br><br></a>
+                          <a class="" style="text-decoration: none; font-size: 0.6em;" href="customer black.html" >Customer Segmentation<br><br></a>
+                       
+                       
+                       
+                       
+                        </p>
+                        </div>
+                    </div>
                   </div>
                   <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
+                   
                   </div>
                 </div>
               </div>
             </div>
+            <div class="d">
+              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;"><a href="casestudy black.html" style="text-decoration: none; color: #fff;">Case Study</a></button>
+              </div>
+              <div class="d">
+                <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">Career <i class="bi bi-chevron-down"></i></button>
+                 <div class="d-content">
+                  <div class="row">
                  
-            <div class="d">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Case Study</button>
-            </div>
-            <div class="d">
-              <button class="d-btn text-light " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Explore⮟</button>
-              <div class="d-content">
-                <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column">
-                    
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="d">
-              <button class="d-btn text-light " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Career⮟</button>
-              <div class="d-content">
-                <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column">
-                    
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                
-            <div class="d">
-              <button class="d-btn text-light " style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">Contact Us</button>
-          </div>
-                
-          <div class="d">
-            <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">☾</button>
-        </div>
+                    <div class="col-md-2" >
               
-            <div class="d">
-              <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 1.0em;">EN⮟</button>
-              <div class="d-content">
-                <div class="row">
-                  <div class="column-lg-2" style="padding-left: 40%; padding-right:0%;">
-                  <br>
-                  </div>
-                  <div class="column pl-0 p-5" style="color: black;">
-                    <div class="col-md-8 pl-0">
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center active">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Services</h2>
-                        
-                      </div>
-                      <div class="shadow col-md p-3 mb-2   bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Products</h2>
-                      </div>
-                      <div class="shadow col-md p-3 mb-2 bg-body rounded text-center">
-                        <h2 style="font-family: Zapf Chancery; font-size: 0.7em;" >Industry</h2>
-                      </div>
+                     
                     </div>
-                  </div>
-                  <div class="column">
+                    <div class="col-md-3">
+                      
+                      <hr style="color: #fff;">
+                      <h6> <a href="" class="text-light" style="text-decoration: none;">Blogs <span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                      <hr style="color: #fff;">
+                      <h6> <a href=""  class="text-light" style="text-decoration: none;">Achievements</a> </h6>
+                      <hr style="color: #fff;">
+                      <h6> <a href=""  class="text-light" style="text-decoration: none;">Success Stories</a> </h6>
+                      <hr style="color: #fff;">
+                      <h6> <a href=""  class="text-light" style="text-decoration: none;"> Events<span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                      <hr style="color: #fff;">
+                   
+                      <h6> <a href=""  class="text-light" style="text-decoration: none;">Report</a> </h6>
+                      <hr style="color: #fff;">
+                      <h6> <a href=""  class="text-light" style="text-decoration: none;">Webinars<span class="align-right" style="text-align: right; float: right;"><i class="bi bi-chevron-right"></i></span></a> </h6>
+                      <hr style="color: #fff;">
+                    </div>
+                    <div class="col-md-5 pt-3">
+                      <h3>Topics</h3>
+                      <hr>
+
+                       <a href="research black.html" class="text-light" style="text-decoration: none;">Digital Reasearch</a>
+                       <a href="research black.html" class="text-light" style="text-decoration: none; float: right; text-align: left;">Digital Reasearch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> <br>
+                      <a href="devops black.html"  class="text-light" style="text-decoration: none; text-align: left;">DevOps</a>
+                      <a href="devops black.html" class="text-light" style="text-decoration: none; float: right;">DevOps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a> <br>
+                       <a href=""  class="text-light" style="text-decoration: none;">Sales Intelligence</a> 
+                       <a href="" class="text-light" style="text-decoration: none; float: right;">Sales Intelligence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a><br>
+                      <a href="legal black.html"  class="text-light" style="text-decoration: none;"> Legal Consultant</a>
+                      <a href="legal black.html" class="text-light" style="text-decoration: none; float: right;" >Legal Consultant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;</a><br>
+                      <a href="marketing black.html"  class="text-light" style="text-decoration: none;">Marketing Automation</a>
+                      <a href="marketing black.html" class="text-light" style="text-decoration: none; float: right;">Marketing Automation</a><br>
+                   </div>    
+                     
+  
+
+                     
+                    </div>
                     
-                    <div class="card p-5" style="width: 18rem;">
-                     <div class="card-body">
-                        <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="column">
-                    <div class="card p-5" style="width: 18rem;">
-                      <div class="card-body">
-                         <p class="card-text" style="font-size: 0.7em;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                       </div>
-                     </div>
                   </div>
                 </div>
+              
+            
+              <div class="d">
+                <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;"><a href="contactus black.html" style="text-decoration: none; color: #fff;">Contact Us</a></button>
+           </div>
+                  
+          <div class="d">
+            <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;"><a href="home.html" style="text-decoration: none; color: #fff;"><i class="bi bi-brightness-high-fill"></i></a></button>
+       </div>
+              
+           <div class="d dropdown">
+                <button class="d-btn text-light" style="color: rgb(0, 0, 0); text-transform: none; background-color: none; font-size: 0.8em;">EN <i class="bi bi-chevron-down"></i></button>
+             
+              
+<form class="dropdown-menu" action="/action_page.php">
+  
+ 
+    <label for="html">English (EN)</label>
+     <input type="radio" id="html" name="fav_language" value="HTML" style=""><br>
+  
+    <label for="css">Arabic (AR)</label>
+   <input type="radio" id="html" name="fav_language" value="HTML"><br>
+    <label for="css">German (DO)</label>
+  <input type="radio" id="html" name="fav_language" value="HTML"><br>
+    <label for="javascript">Korean (KO)</label>
+    <input type="radio" id="html" name="fav_language" value="HTML"><br>
+  
+  
+  
+  </form>
               </div>
             </div>
-            <div class="d">
-              <button class="d-btn btn btn- text-light btn-rounded " style="background-color: #BC312E; font-size: 0.7em;">Sign Up</button>
+            <div class="d" style="">
+              <button class="d-btn btn btn- text-light btn-rounded " style="background-color: #BC312E; font-size: 0.7em;" style="float: right;"><a href="careerlogin black.html" style="text-decoration: none; color: #fff;">Sign Up</a></button>
           </div>
           </ul>
         </div>
       </div>
     </nav>
-
-
-
     <div
     class="pt-0 text-center bg-image"
     style="

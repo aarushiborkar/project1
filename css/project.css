@@ -1,160 +1,168 @@
+
+
+
+
+
+
+
+
+
+
+
 .navbar-light .navbar-nav .nav-link {
-    color: rgb(81, 80, 80);
-  }
+  color: rgb(81, 80, 80);
+}
 
 
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-  }
-  
-  /* Create four equal columns that sits next to each other */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
   .column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
+    flex: 50%;
+    max-width: 50%;
   }
-  
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
   }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-    }
-  }
+}
 
 
 
-  .gfg {
-    margin: 3%;
-    position: relative;
+.gfg {
+  margin: 3%;
+  position: relative;
 }
 
 .first-txt {
-    position: absolute;
-    top: 17px;
-    left: 50px;
+  position: absolute;
+  top: 17px;
+  left: 50px;
 }
 
 
 
 .hover {
-  overflow: hidden;
-  position: relative;
-  padding-bottom: 45%;
+overflow: hidden;
+position: relative;
+padding-bottom: 45%;
 }
 
 .hover-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  transition: all 0.4s;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 90;
+transition: all 0.4s;
 }
 
 .hover img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.3s;
+width: 100%;
+position: absolute;
+top: 0;
+left: 0;
+transition: all 0.3s;
 }
 
 .hover-content {
-  position: relative;
-  z-index: 99;
+position: relative;
+z-index: 99;
 }
 
 
 /* DEMO 1 ============================== */
 .hover-1 img {
-  width: 105%;
-  position: absolute;
-  top: 0;
-  left: -5%;
-  transition: all 0.3s;
+width: 105%;
+position: absolute;
+top: 0;
+left: -5%;
+transition: all 0.3s;
 }
 
 .hover-1-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-  transition: all 0.4s;
+position: absolute;
+bottom: 0;
+left: 0;
+z-index: 99;
+transition: all 0.4s;
 }
 
 .hover-1 .hover-overlay {
-  background: rgba(0, 0, 0, 0.5);
+background: rgba(0, 0, 0, 0.5);
 }
 
 .hover-1-description {
-  transform: translateY(0.5rem);
-  transition: all 0.4s;
-  opacity: 0;
+transform: translateY(0.5rem);
+transition: all 0.4s;
+opacity: 0;
 }
 
 .hover-1:hover .hover-1-content {
-  bottom: 2rem;
+bottom: 2rem;
 }
 
 .hover-1:hover .hover-1-description {
-  opacity: 1;
-  transform: none;
+opacity: 1;
+transform: none;
 }
 
 .hover-1:hover img {
-  left: 0;
+left: 0;
 }
 
 .hover-1:hover .hover-overlay {
-  opacity: 0;
+opacity: 0;
 }
 
 
 
 
-  .second-txt {
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
+.second-txt {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
 }
 
 .card .img-wrapper {
-    max-width: 100%;
-    height: 13em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-width: 100%;
+  height: 13em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card img {
-    max-height: 100%;
+  max-height: 100%;
 }
 @media (max-width: 767px) {
-  .card .img-wrapper {
-    height: 17em;
-  }
+.card .img-wrapper {
+  height: 17em;
 }
-
-
-
+}
 
 
 
@@ -455,25 +463,39 @@ a:hover,a:focus{
     border-radius: 5px;
 }
 
+@media (min-width: 20em) {
+  img{
+    width: 100%;
+  }
+.bg-image{
+width: 100%;
+ }
+ .boxes{
 
+padding-bottom: 100%;
+padding-top:  100%;
+overflow: hidden;
+}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (min-width: 680px) {
+   .boxes{
+    width: 100%;
+    padding-left: 10%;
+    padding-bottom: 0%;
+padding-top:  0%;
+  }
+  .bg-image{
+    width: 100%;
+     }
+}
+@media (min-width: 480px) {
+  /* Probably some parent element that limits the img width */
+  .boxes{
+    width: 90%;
+    padding-left: 0%;
+  }
+}
 
 .sticky-div {
   
@@ -481,6 +503,23 @@ a:hover,a:focus{
   top: 0px;
   padding: 10px 0px;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .column {
 	float: left;
 	width: 33.33%;
@@ -644,3 +683,82 @@ div.active {
   display:block;
 }
 
+
+
+
+
+
+
+.subscribe-area {
+  background-color: #211F22;
+  }
+  
+  .pb-50 {
+      padding-bottom: 20px;
+      padding-top: 20px;
+  }
+  .pt-70 {
+      padding-top: 20px;
+  }
+  
+  .mb-15 {
+      margin-bottom: 15px;
+      margin-top: 15px;
+  }
+  
+  .subscribe-text span {
+      font-size: 12px;
+      color: #fff;
+      font-family: Chalkduster;
+  }
+  .subscribe-text h2 {
+      color: #fff;
+      margin-bottom: 0;
+      margin-top: 10px;
+  }
+  .subscribe-wrapper {
+      overflow: hidden;
+  }
+  .mb-15 {
+      margin-bottom: 15px;
+  }
+  .subscribe-form {
+  }
+  .subscribe2-wrapper .subscribe-form input {
+      background: none;
+      border: 1px solid #fff;
+      border-radius: 30px;
+      color: #fff;
+      display: inline-block;
+    
+      height: 30px;
+      margin-right: 17px;
+      
+      
+      cursor: pointer;
+  }
+   
+  .subscribe2-wrapper .subscribe-form button {
+      background: #ffff;
+      border: none;
+      border-radius: 30px;
+      color: #4b5d73;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1;
+      padding: 18px 46px;
+      transition: all 0.3s ease 0s;
+  }
+  .subscribe2-wrapper .subscribe-form button i {
+      font-size: 18px;
+      padding-left: 5px;
+  }
+  
+
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
